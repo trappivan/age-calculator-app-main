@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="main.css">
+  <link rel="application/javascript" type="" href="index.js">
   <script src="https://cdn.tailwindcss.com"></script>   
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <script src="index.js"></script>
   
   <title>Frontend Mentor | Age calculator app</title>
 
@@ -17,45 +19,48 @@
 </head>
 <body>
   <div class="flex bg-gray-300 items-center flex-row border-2 border-solid border-red-700 justify-center w-auto h-screen">
-    <div class="flex bg-white p-6 flex-row h-[26rem] w-[25rem] rounded-br-[7rem] border-2 border-solid border-gray-300">
-      <div class="flex flex-col">
-        <div class="flex flex-col w-[19rem]">
-          <div class="flex space-x-4 p-6 justify-start flex-row w-[19rem] h-[8rem] border-b border-solid border-gray-300">
-            <div class="flex flex-col ">
-              <span>DAY</span>
-              <input type="number" class="w-[5rem] border border-solid border-gray-300 rounded-md p-2" placeholder="DD">
+    <form action="">
+      <div class="flex bg-white p-6 flex-row h-[26rem] w-[25rem] rounded-br-[7rem] border-2 border-solid border-gray-300">
+        <div class="flex flex-col">
+          <div class="flex flex-col w-[19rem]">
+            <div class="flex space-x-4 p-6 justify-start flex-row w-[19rem] h-[8rem] border-b border-solid border-gray-300">
+              <div class="flex flex-col ">
+                <span>DAY</span>
+                <input type="number" id="day" class="w-[5rem] border border-solid border-gray-300 rounded-md p-2" placeholder="DD">
+              </div>
+              <div class="flex flex-col ">
+                <span>MONTH</span>
+                <input type="number" id="month" class="w-[5rem] border border-solid border-gray-300 rounded-md p-2" placeholder="MM">
+              </div>
+              <div class="flex flex-col ">
+                <span>YEAR</span>
+                <input type="number" id="year" class="w-[5rem] border border-solid border-gray-300 rounded-md p-2" placeholder="YYYY">
+              </div>
             </div>
-            <div class="flex flex-col ">
-              <span>MONTH</span>
-              <input type="number" class="w-[5rem] border border-solid border-gray-300 rounded-md p-2" placeholder="MM">
+          </div>
+          <div class="flex flex-col mt-8 space-y-8">
+            <div class="flex flex-row items-center space-x-4">
+              <span id="yearsdisplay" class="text-violet-900 text-5xl">--</span>
+              <span class="text-5xl">years</span>
             </div>
-            <div class="flex flex-col ">
-              <span>YEAR</span>
-              <input type="number" class="w-[5rem] border border-solid border-gray-300 rounded-md p-2" placeholder="YYYY">
+            <div class="flex flex-row items-center space-x-4">
+              <span id="monthsdisplay" class="text-violet-900 text-5xl">--</span>
+              <span class="text-5xl">months</span>
+            </div>
+            <div class="flex flex-row items-center space-x-4">
+              <span id="daysdisplay" class="text-violet-900 text-5xl">--</span>
+              <span class="text-5xl">days</span>
             </div>
           </div>
         </div>
-        <div class="flex flex-col mt-8 space-y-8">
-          <div class="flex flex-row items-center space-x-4">
-            <span class="text-violet-900 text-5xl">--</span>
-            <span class="text-5xl">years</span>
-          </div>
-          <div class="flex flex-row items-center space-x-4">
-            <span class="text-violet-900 text-5xl">--</span>
-            <span class="text-5xl">months</span>
-          </div>
-          <div class="flex flex-row items-center space-x-4">
-            <span class="text-violet-900 text-5xl">--</span>
-            <span class="text-5xl">days</span>
-          </div>
+        
+        <div class="flex  w-auto h-[16rem] items-center">
+          <button id="submit" onclick="getdata();" type="button" ><img src="/assets/images/Purple_Three-fold_Tomoe.svg" width="60" height="100" alt=""></button>
         </div>
       </div>
-      
-      <div class="flex  w-auto h-[16rem] items-center">
-        <button type="submit"><img src="/assets/images/Purple_Three-fold_Tomoe.svg" width="60" height="100" alt=""></button>
-      </div>
-    </div>
     
+    </form>
+      
   </div>
 
 
